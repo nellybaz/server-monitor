@@ -25,6 +25,13 @@ os.system("echo ===== INSTALLING DEPENCIES FOR SERVER MONITOR =====")
 os.system("pip install -r requirements.txt")
 
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path += "/data.txt"
+
+f=open(dir_path, "a+")
+f.write(email + "\n" + server)
+f.close()
+
 # Ping the server
 # os.system("ping www.google.com")
 
